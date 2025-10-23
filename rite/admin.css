@@ -1,0 +1,209 @@
+/* ========== MOBILE-FIRST CYBER ADMIN PANEL ========== */
+.admin-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.admin-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    background: var(--cyber-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 25px;
+    font-family: 'Orbitron', monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.admin-actions {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.action-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.admin-btn {
+    background: transparent;
+    color: var(--text);
+    border: 2px solid var(--primary);
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    font-size: 0.9rem;
+}
+
+.admin-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--cyber-gradient);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.admin-btn:hover::before {
+    left: 0;
+}
+
+.admin-btn:hover {
+    color: var(--dark);
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: var(--neon-glow);
+}
+
+.admin-section {
+    margin-bottom: 25px;
+    background: rgba(26, 26, 26, 0.7);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 0, 128, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.admin-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--cyber-gradient);
+}
+
+.admin-section h2 {
+    color: var(--secondary);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: 'Orbitron', monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(10, 10, 10, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 600px;
+}
+
+.admin-table th {
+    background: var(--cyber-gradient);
+    color: var(--dark);
+    padding: 12px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'Orbitron', monospace;
+}
+
+.admin-table td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text);
+    transition: all 0.3s ease;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.9rem;
+}
+
+.admin-table tr:hover {
+    background: rgba(255, 0, 128, 0.05);
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.btn-edit, .btn-delete {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'Rajdhani', sans-serif;
+    width: 100%;
+    text-align: center;
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+    .admin-container {
+        padding: 20px;
+    }
+    
+    .admin-container h1 {
+        font-size: 2.5rem;
+    }
+    
+    .action-form {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .admin-btn {
+        width: auto;
+        font-size: 1rem;
+        padding: 15px 25px;
+    }
+    
+    .action-buttons {
+        flex-direction: row;
+        gap: 8px;
+    }
+    
+    .btn-edit, .btn-delete {
+        width: auto;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    .admin-container h1 {
+        font-size: 3rem;
+    }
+    
+    .admin-section {
+        padding: 25px;
+    }
+}
